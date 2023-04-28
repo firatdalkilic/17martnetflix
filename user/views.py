@@ -88,7 +88,7 @@ def createProfil(request):
             profil.save()
             messages.success(request, 'Profil oluşturuldu')
             return redirect('profiles')
-
+    print("Merhaba")
     context = {
         'form':form
     }
