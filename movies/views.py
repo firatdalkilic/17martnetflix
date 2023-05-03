@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import *
 from django.db.models import Q
 from user.models import *
@@ -36,3 +36,6 @@ def search(request):
             'filmler':filmler
         }
         return render(request, 'search.html', context)
+
+def view_404(request, exception):
+     return redirect("/")
